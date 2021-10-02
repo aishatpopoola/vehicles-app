@@ -46,6 +46,11 @@ git clone https://github.com/aishatpopoola/vehicles-app.git
 npm install
 ```
 
+- To Start APP
+```bash
+npm start
+```
+
 To run the lint task:
 
 ```bash
