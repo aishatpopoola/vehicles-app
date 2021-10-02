@@ -4,11 +4,15 @@ import { NavLink } from 'react-router-dom';
 
 const Vehicles = () => {
   const [vehicles, setVehicles] = useState([]);
+  const [error, setError] = useState(false);
   const fetchVehicleData = () => {
     Axios.get('get-vehicles')
       .then(res => {
-        console.log(res);
         setVehicles(res.data.vehicles);
+        setError(false);
+      })
+      .catch(() => {
+        setError(true);
       });
   };
   useEffect(() => {
@@ -16,7 +20,9 @@ const Vehicles = () => {
   }, []);
   return (
   <div>
-    <h2>Vehicles</h2>
+    <div className={`p-10 ${error ? 'd-block' : 'd-none'}`}>
+        <p>An Error occured while fetching the data, Please check your network and try again</p>
+      </div>
     <h1 className="ta-center">All Companies</h1>
       {vehicles.length >= 1 ? (
         vehicles.map(vehicle => (
