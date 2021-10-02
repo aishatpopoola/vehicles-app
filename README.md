@@ -1,6 +1,6 @@
 # VEHICLE FLEET TRACKING APP
 
-> This ia an app that can be used by a business that wants to track their fleet of cars or trucks. The app should have:
+> This is an app that can be used by a business that wants to track their fleet of cars or trucks. The app should have:
 
 ![screenshot](./app_screenshot.png)
 
@@ -36,7 +36,7 @@
 - Clone the project
 
 ```bash
-git clone https://github.com/aishatpopoola/vehicles-app.git
+git clone https://github.com/aishatpopoola/vehicles-app
 
 ```
 
@@ -44,11 +44,6 @@ git clone https://github.com/aishatpopoola/vehicles-app.git
 
 ```bash
 npm install
-```
-
-- To Start APP
-```bash
-npm start
 ```
 
 To run the lint task:
