@@ -138,10 +138,6 @@ select:focus,
   margin-bottom: 50px;
 }
 
-.br-block {
-  border-right: 1px solid rgba(0, 0, 0, 0.125);
-}
-
 .bt-block {
   border-top: 1px solid rgba(0, 0, 0, 0.125);
 }

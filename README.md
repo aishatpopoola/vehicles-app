@@ -1,6 +1,6 @@
 # VEHICLE FLEET TRACKING APP
 
-> This ia an app that can be used by a business that wants to track their fleet of cars or trucks. The app should have:
+> This is an app that can be used by a business that wants to track their fleet of cars or trucks. The app should have:
 
 ![screenshot](./app_screenshot.png)
 

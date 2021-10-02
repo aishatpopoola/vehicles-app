@@ -49,20 +49,19 @@ const Vehicle = ({
   };
   return (
   <div>
-      <div className={`p-10 ${!alert.type ? 'd-none' : alert.type}`}>
+      <div className={`p-10 alert ${!alert.type ? 'd-none' : alert.type}`}>
         <p className="d-flex justify-between">
            {alert.message} <span onClick={closeAlert}>X</span>
         </p>
       </div>
       {vehicle ? (
         <>
+          <h2 className="text-center my-10 p-10">{`${vehicle.maker} - ${vehicle.model}`}</h2>
           <VehicleForm
             submitHandler={handleSubmit}
             values={vehicle}
             setValues={setVehicle}
           />
-          <p>{vehicle.maker}</p>
-          <p>{vehicle.model}</p>
         </>
       ) : (
         <p className="p-10 m-10 text-center">Getting Vehicle data...</p>

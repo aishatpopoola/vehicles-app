@@ -59,11 +59,8 @@ const VehicleForm = ({ submitHandler, values, setValues }) => {
         />
       </div>
       <div className="form-group titleInputDiv mb-10">
-        <label htmlFor="year">
-          Year
-          <sup>*</sup>
           <select
-            className="formControl w_full mt_10"
+            className="form-control w-full mt-10"
             id="year"
             name="year"
             onChange={e => setValues({ ...values, year: e.target.value })}
@@ -74,7 +71,6 @@ const VehicleForm = ({ submitHandler, values, setValues }) => {
               <option key={option} value={option}>{option}</option>
             ))}
           </select>
-        </label>
       </div>
       <div className="form-group titleInputDiv mb-10">
         <input

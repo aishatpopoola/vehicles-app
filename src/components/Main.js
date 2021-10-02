@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Main = ({ children }) => (
-  <main>
+  <main className="mx-auto p-10">
       {children}
   </main>
 );

@@ -40,7 +40,7 @@ const Vehicles = () => {
   };
   return (
     <div>
-      <div className={`p-10 ${!alert.type ? 'd-none' : alert.type}`}>
+      <div className={`p-10 alert ${!alert.type ? 'd-none' : alert.type}`}>
         <p className="d-flex justify-between">
            {alert.message} <span onClick={closeAlert}>X</span>
         </p>
