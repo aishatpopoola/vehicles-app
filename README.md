@@ -1,6 +1,6 @@
 # VEHICLE FLEET TRACKING APP
 
-> This is an app that can be used by a business that wants to track their fleet of cars or trucks. The app should have:
+> This is an app that can be used by a business that wants to track their fleet of cars or trucks. The App uses the api endpoint of  [Library-API](https://github.com/aishatpopoola/vehicles-api)
 
 ![screenshot](./app_screenshot.png)
 
@@ -17,6 +17,8 @@
 - data entered into add vehicle modal doesn't get cleared after vehicle is added
 - Code can still be refactored further
 - User interface can be imoproved further
+- Page title can be worked on
+- Page icon and description can be improved
 
 ## Technology Used
 
