@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import Axios from 'axios';
 import { useHistory } from 'react-router-dom';
+import VehicleForm from './VehicleForm';
 
 const Vehicle = ({
   match: {
@@ -36,6 +37,16 @@ const Vehicle = ({
   const closeAlert = () => {
     setAlert({ type: '', message: '' });
   };
+  const handleSubmit = () => {
+    const header = { headers: { 'Content-Type': 'application/json' } };
+    Axios.patch('update-vehicle', vehicle, header)
+      .then(res => {
+        setAlert({ type: 'd-block alert-success', message: res.data.message });
+      })
+      .catch(() => {
+        setAlert({ type: 'd-block alert-danger', message: 'An Error occured while fetching the data, Please check your network and try again' });
+      });
+  };
   return (
   <div>
       <div className={`p-10 ${!alert.type ? 'd-none' : alert.type}`}>
@@ -44,7 +55,15 @@ const Vehicle = ({
         </p>
       </div>
       {vehicle ? (
-        <h2>{vehicle.maker}</h2>
+        <>
+          <VehicleForm
+            submitHandler={handleSubmit}
+            values={vehicle}
+            setValues={setVehicle}
+          />
+          <p>{vehicle.maker}</p>
+          <p>{vehicle.model}</p>
+        </>
       ) : (
         <p className="p-10 m-10 text-center">Getting Vehicle data...</p>
       )}

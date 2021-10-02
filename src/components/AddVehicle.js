@@ -6,7 +6,11 @@ import VehicleForm from './VehicleForm';
 
 const AddVehicle = ({ alert, setVehicles, vehicles }) => {
   const [modalDisplay, setModalDisplay] = useState(false);
-  const handleSubmit = values => {
+  const [values, setValues] = useState({
+    vehicle_id: '', maker: '', model: '', year: null, license_number: '',
+  });
+
+  const handleSubmit = () => {
     const header = { headers: { 'Content-Type': 'application/json' } };
     Axios.post('add-vehicle', values, header)
       .then(res => {
@@ -41,7 +45,8 @@ const AddVehicle = ({ alert, setVehicles, vehicles }) => {
         >
         <VehicleForm
           submitHandler={handleSubmit}
-          initialValues={{}}
+          values={values}
+          setValues={setValues}
         />
       </Modal>
     </div>

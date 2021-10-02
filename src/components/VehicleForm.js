@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 const options = [
@@ -25,17 +25,10 @@ const options = [
   '2021',
 ];
 
-const VehicleForm = ({ submitHandler, initialValues }) => {
-  const [values, setValues] = useState({
-    vehicle_id: initialValues.vehicle_id,
-    maker: initialValues.maker,
-    model: initialValues.model,
-    year: initialValues.year,
-    license_plate: initialValues.license_plate,
-  });
+const VehicleForm = ({ submitHandler, values, setValues }) => {
   const handleSubmit = e => {
     e.preventDefault();
-    submitHandler(values);
+    submitHandler();
   };
   return (
     <form onSubmit={handleSubmit}>
@@ -73,7 +66,6 @@ const VehicleForm = ({ submitHandler, initialValues }) => {
             className="formControl w_full mt_10"
             id="year"
             name="year"
-            value={values.year}
             onChange={e => setValues({ ...values, year: e.target.value })}
             required
           >
@@ -110,7 +102,7 @@ const VehicleForm = ({ submitHandler, initialValues }) => {
 };
 
 VehicleForm.propTypes = {
-  initialValues: PropTypes.shape({
+  values: PropTypes.shape({
     vehicle_id: PropTypes.string,
     maker: PropTypes.string,
     year: PropTypes.number,
@@ -118,7 +110,6 @@ VehicleForm.propTypes = {
     license_plate: PropTypes.string,
   }),
   setValues: PropTypes.func,
-  id: PropTypes.string,
   submitHandler: PropTypes.func,
 };
 
