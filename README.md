@@ -11,6 +11,13 @@
 - Ability to add a new vehicle.
 - Ability to delete a vehicle.
 
+@ TODO 
+
+- Create validations for License plate based on each countries
+- data entered into add vehicle modal doesn't get cleared after vehicle is added
+- Code can still be refactored further
+- User interface can be imoproved further
+
 ## Technology Used
 
 - CSS
