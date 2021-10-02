@@ -4,19 +4,20 @@ import Axios from 'axios';
 import Modal from './Modal';
 import VehicleForm from './VehicleForm';
 
-const AddVehicle = ({ alert }) => {
+const AddVehicle = ({ alert, setVehicles, vehicles }) => {
   const [modalDisplay, setModalDisplay] = useState(false);
   const handleSubmit = values => {
     const header = { headers: { 'Content-Type': 'application/json' } };
     Axios.post('add-vehicle', values, header)
-      .then(() => {
+      .then(res => {
+        setVehicles(vehicles.concat(res.data.vehicle));
         alert({ type: 'd-block alert-success', message: 'Vehicle Successfully added' });
       })
       .catch(e => {
         if (e.message === 'Request failed with status code 422') {
           alert({ type: 'd-block alert-danger', message: 'License plate taken' });
         } else {
-          alert({ type: 'd-block alert-danger', message: 'An Error occured while fetching the data, Please check your network and try again' });
+          alert({ type: 'd-block alert-danger', message: 'An Error occured while adding the vehicle, Please check your network and try again' });
         }
       });
     setModalDisplay(false);
@@ -50,6 +51,8 @@ const AddVehicle = ({ alert }) => {
 
 AddVehicle.propTypes = {
   alert: PropTypes.func.isRequired,
+  setVehicles: PropTypes.func.isRequired,
+  vehicles: PropTypes.arrayOf(PropTypes.object),
 };
 
 export default AddVehicle;
