@@ -29,7 +29,7 @@
 
 ## Live Demo
 
-[coming-soon]()
+[Live link](https://naughty-kirch-9bd89c.netlify.app/)
 
 ### Development (Running locally)
 
