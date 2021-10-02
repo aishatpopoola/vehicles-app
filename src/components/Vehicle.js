@@ -11,28 +11,37 @@ const Vehicle = ({
   const [vehicle, setVehicle] = useState({
     vehicle_id: '', maker: '', model: '', year: null, license_number: '',
   });
-  const [error, setError] = useState(false);
+
+  const [alert, setAlert] = useState({ type: '', message: '' });
+
   const history = useHistory();
+
   const fetchVehicleData = () => {
     Axios.get(`get-vehicles/${id}`)
       .then(res => {
         setVehicle(res.data.vehicle);
-        setError(false);
       })
       .catch(error => {
         if (error.message === 'Request failed with status code 404') {
           history.push('/not-found');
         }
-        setError(true);
+        setAlert({ type: 'd-block alert-danger', message: 'An Error occured while fetching the data, Please check your network and try again' });
       });
   };
+
   useEffect(() => {
     fetchVehicleData();
   }, []);
+
+  const closeAlert = () => {
+    setAlert({ type: '', message: '' });
+  };
   return (
   <div>
-      <div className={`p-10 ${error ? 'd-block' : 'd-none'}`}>
-        <p>An Error occured while fetching the data, Please check your network and try again</p>
+      <div className={`p-10 ${!alert.type ? 'd-none' : alert.type}`}>
+        <p className="d-flex justify-between">
+           {alert.message} <span onClick={closeAlert}>X</span>
+        </p>
       </div>
       {vehicle ? (
         <h2>{vehicle.maker}</h2>
