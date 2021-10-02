@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+# VEHICLE FLEET TRACKING APP
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> This ia an app that can be used by a business that wants to track their fleet of cars or trucks. The app should have:
 
-## Available Scripts
+![screenshot](./app_screenshot.png)
 
-In the project directory, you can run:
+### APP Feature
 
-### `npm start`
+- Ability to see all vehicles in the database.
+- Ability to edit an existing vehicle and update the record.
+- Ability to add a new vehicle.
+- Ability to delete a vehicle.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technology Used
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- CSS
 
-### `npm test`
+  - CSS Flexbox
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [React](https://reactjs.org/)
 
-### `npm run build`
+- Javascript
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [stylint](https://stylelint.io/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [EsLint](https://eslint.com/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [NPM](https://www.npmjs.com/)
 
-### `npm run eject`
+## Live Demo
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+[coming-soon]()
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Development (Running locally)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Clone the project
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+git clone https://github.com/aishatpopoola/vehicles-app.git
 
-## Learn More
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Install Dependencies
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm install
+```
 
-### Code Splitting
+To run the lint task:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm run lint:check
+```
 
-### Analyzing the Bundle Size
+Or to automatically fix issues found (where possible):
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+npm run lint
+```
 
-### Making a Progressive Web App
+## Style Guides
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- [CSS Style Guide](http://udacity.github.io/frontend-nanodegree-styleguide/css.html)
+- [HTML Style Guide](http://udacity.github.io/frontend-nanodegree-styleguide/index.html)
+- [JavaScript Style Guide](http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html)
+- [Git Style Guide](https://udacity.github.io/git-styleguide/)
 
-### Advanced Configuration
+## 👤 Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Popoola Aishat
 
-### Deployment
+- Github: [@aishatpopoola](https://github.com/aishatpopoola/)
+- LinkedIn: [aishat-popoola](www.linkedin.com/in/aishat-popoola)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🤝 Contributing
 
-### `npm run build` fails to minify
+Contributions, issues and feature requests are welcome!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to check the [issues page](../../issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- [MDN](https://developer.mozilla.org/)
+
+- [w3schools](https://www.w3schools.com/)
+
+- [React](https://reactjs.org/)
+
+- [Redux](https://redux.js.org/)
+
+## 📝 License
+
+[MIT licensed](./LICENSE).
