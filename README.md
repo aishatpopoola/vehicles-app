@@ -36,7 +36,7 @@
 - Clone the project
 
 ```bash
-git clone https://github.com/aishatpopoola/vehicles-app.git
+git clone https://github.com/aishatpopoola/vehicles-app
 
 ```
 
@@ -44,11 +44,6 @@ git clone https://github.com/aishatpopoola/vehicles-app.git
 
 ```bash
 npm install
-```
-
-- To Start APP
-```bash
-npm start
 ```
 
 To run the lint task:
