@@ -7,7 +7,7 @@ import VehicleForm from './VehicleForm';
 const AddVehicle = ({ alert, setVehicles, vehicles }) => {
   const [modalDisplay, setModalDisplay] = useState(false);
   const [values, setValues] = useState({
-    vehicle_id: '', maker: '', model: '', year: null, license_number: '',
+    vehicle_id: '', maker: '', model: '', year: '', license_plate: '',
   });
 
   const handleSubmit = () => {
@@ -15,6 +15,9 @@ const AddVehicle = ({ alert, setVehicles, vehicles }) => {
     Axios.post('add-vehicle', values, header)
       .then(res => {
         setVehicles(vehicles.concat(res.data.vehicle));
+        setValues({
+          vehicle_id: '', maker: '', model: '', year: '', license_plate: '',
+        });
         alert({ type: 'd-block alert-success', message: 'Vehicle Successfully added' });
       })
       .catch(e => {

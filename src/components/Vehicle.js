@@ -10,7 +10,7 @@ const Vehicle = ({
   },
 }) => {
   const [vehicle, setVehicle] = useState({
-    vehicle_id: '', maker: '', model: '', year: null, license_number: '',
+    vehicle_id: '', maker: '', model: '', year: '', license_plate: '',
   });
 
   const [alert, setAlert] = useState({ type: '', message: '' });
@@ -51,7 +51,7 @@ const Vehicle = ({
   <div>
       <div className={`p-10 alert ${!alert.type ? 'd-none' : alert.type}`}>
         <p className="d-flex justify-between">
-           {alert.message} <span onClick={closeAlert}>X</span>
+           {alert.message} <span onClick={closeAlert} className="pointer">X</span>
         </p>
       </div>
       {vehicle ? (

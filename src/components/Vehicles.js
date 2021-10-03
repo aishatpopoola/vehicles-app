@@ -42,13 +42,13 @@ const Vehicles = () => {
     <div>
       <div className={`p-10 alert ${!alert.type ? 'd-none' : alert.type}`}>
         <p className="d-flex justify-between">
-           {alert.message} <span onClick={closeAlert}>X</span>
+           {alert.message} <span onClick={closeAlert} className="pointer">X</span>
         </p>
       </div>
       <AddVehicle alert={setAlert} setVehicles={setVehicles} vehicles={vehicles}/>
-      <h1 className="ta-center">All Vehicles</h1>
+      <h1 className="text-center">All Vehicles</h1>
       {vehicles.length >= 1 ? (
-        vehicles.map(vehicle => (
+        [...vehicles].reverse().map(vehicle => (
           <NavLink
             to={`/vehicle/${vehicle.vehicle_id}`}
             key={vehicle.vehicle_id}
@@ -58,14 +58,15 @@ const Vehicles = () => {
               <b>{`${vehicle.maker}  ${vehicle.model}`}</b>
             </span>
             <button
-              className="btn btn-danger"
+              className="btn btn-danger pointer"
               type="submit"
+              style={{ borderRadius: '50%' }}
               onClick={e => {
                 e.preventDefault();
                 handleDelete(vehicle.vehicle_id);
               }}
             >
-              Delete
+              X
             </button>
           </NavLink>
         ))

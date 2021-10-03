@@ -101,7 +101,7 @@ VehicleForm.propTypes = {
   values: PropTypes.shape({
     vehicle_id: PropTypes.string,
     maker: PropTypes.string,
-    year: PropTypes.number,
+    year: PropTypes.string,
     model: PropTypes.string,
     license_plate: PropTypes.string,
   }),
