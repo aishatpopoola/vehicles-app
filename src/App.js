@@ -10,14 +10,14 @@ import NotFound from './components/NotFound';
 
 const App = () => (
     <BrowserRouter>
-      <Navbar />
+      <Navbar /> {/** This is the base navbar component */}
       <Main>
-        <Route exact path="/" component={Home} />
-        <Route path="/vehicles" component={Vehicles} />
-        <Route path="/not-found" component={NotFound} />
-        <Route exact path="/vehicle/:id" component={Vehicle} />
-      </Main>
-      <Footer />
+        <Route exact path="/" component={Home} /> {/** This sets the path to homepage */}
+        <Route path="/vehicles" component={Vehicles} /> {/** This sets the path to vehicles page */}
+        <Route path="/not-found" component={NotFound} /> {/** This sets the path to 404 page */}
+        <Route exact path="/vehicle/:id" component={Vehicle} /> {/** This sets the path to view individual vehicles */}
+      </Main> {/** This the main section of all pages */}
+      <Footer /> {/** This sets the footer incoporated to all pages */}
     </BrowserRouter>
 );
 

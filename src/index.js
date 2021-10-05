@@ -5,6 +5,7 @@ import App from './App';
 import './css/index.css';
 import reportWebVitals from './reportWebVitals';
 
+// this sets the base url for the api
 Axios.defaults.baseURL = 'https://morning-mountain-88083.herokuapp.com/api/';
 Axios.defaults.withCredentials = true;
 
