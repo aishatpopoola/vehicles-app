@@ -26,6 +26,8 @@ const options = [
 ];
 
 const VehicleForm = ({ submitHandler, values, setValues }) => {
+
+  // handles the submit function based on the function that was passed to the component
   const handleSubmit = e => {
     e.preventDefault();
     submitHandler();
